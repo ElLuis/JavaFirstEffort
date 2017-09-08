@@ -1,0 +1,32 @@
+package ElLuis; 
+import java.util.Scanner; 
+public class ComputeChange 
+{ 
+     
+public static void main(String[]args) 
+{ 
+    //interactive programming to find how many different coin types you may have 
+    Scanner sc = new Scanner(System.in); 
+    System.out.println("Please Enter amount in double: "); 
+    double amount = sc.nextDouble(); 
+    int remainingAmount = (int)(amount * 100); 
+    int numberOfOneDollars = remainingAmount / 100; 
+    remainingAmount = remainingAmount % 100; 
+    int numberOfQuarters = remainingAmount / 25; 
+    remainingAmount = remainingAmount % 25; 
+    int numberOfNickels = remainingAmount / 10; 
+    remainingAmount = remainingAmount % 10; 
+    int numberOfDimes = remainingAmount / 5; 
+    remainingAmount = remainingAmount % 5; 
+    int numberOfCents = remainingAmount; 
+     
+    System.out.println("The amount " + amount + " that you entered has: "); 
+    System.out.println("       "+ numberOfOneDollars + " one dollar"); 
+    System.out.println("       "+ numberOfQuarters + " quarters"); 
+    System.out.println("       "+ numberOfNickels + " nickels"); 
+    System.out.println("       "+ numberOfDimes + " dimes"); 
+    System.out.println("       "+ numberOfCents + " cents"); 
+} 
+  
+  
+}
